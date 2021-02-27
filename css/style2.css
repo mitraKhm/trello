@@ -1,0 +1,971 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Tajawal', sans-serif;
+    background-color: rgb(0, 121, 191);
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+*:active {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container {
+    /* width:max-content ;*/
+    width: 100%;
+    max-width: 1900px;
+    display: block;
+    margin: 0px auto;
+}
+
+.col-6 {
+    width: 50%;
+    float: left;
+}
+
+.col-12 {
+    width: 100%;
+    float: left;
+}
+
+.col-4 {
+    width: 33.33px;
+}
+
+.col-3 {
+    width: 25%;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+    width: 100%;
+}
+
+.h-bg {
+    /* background-color: #0067a3; */
+    background-color: rgb(5 5 5 / 16%);
+}
+
+.m-bg {
+    background-color: #0079bf;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    z-index: 10;
+}
+
+.content {
+    height: calc(100vh - 110px);
+    padding: 0px 10px;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.task-wraper {
+    display: flex;
+    flex-direction: row;
+}
+
+.boarder-radiuse {
+    /* background-color: #4c94be; */
+    background-color: rgba(216, 216, 216, 0.445);
+    border-radius: 5px;
+    border: none;
+}
+
+.f-nav {
+    height: 46px;
+}
+
+.s-btn {
+    margin: 4px 6px;
+    width: 36px;
+    height: 36px;
+    margin-right: 3px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.boards {
+    float: left;
+    height: 36px;
+    width: 127px;
+    margin: 5px 10px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+}
+
+.board-text {
+    padding: 0px;
+    margin: 4px;
+}
+
+.treloo-icon {
+    width: 27px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.boards:hover {
+    /* background-color: #4287af; */
+    background-color: rgba(216, 216, 216, 0.322);
+}
+
+.s-btn:hover {
+    background-color: rgba(216, 216, 216, 0.322);
+}
+
+.icon-trello {
+    width: 100px;
+    position: absolute;
+    right: 48%;
+    top: 4px;
+}
+
+.search-icon {
+    margin: 5px;
+    width: 25px;
+}
+
+.search {
+    margin: 4px;
+    height: 36px;
+    float: left;
+    background-color: rgba(216, 216, 216, 0.322);
+    border-radius: 5px;
+    border: none;
+}
+
+.search-button {
+    background: initial;
+    border: 0px;
+    position: relative;
+    top: -13px;
+    height: 34px;
+}
+
+.nav {
+    height: 40px;
+}
+
+.nav-left * {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #FFF;
+
+}
+
+.left-menu {
+    margin: 0px;
+}
+
+#showMenu:hover {
+    color: #12133d;
+}
+
+.nav-right {
+    margin: 10px;
+    font-size: 15px;
+    direction: rtl;
+    color: #FFF;
+}
+
+/* main list style */
+.text-box {
+    position: relative;
+    float: left;
+    /* height:max-content;*/
+    width: 250px;
+    background-color: #e2e2e2dc;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 10px;
+    max-height: 95%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-box-wrapper {
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.list-title {
+    float: left;
+    margin: 0px;
+    padding: 10px;
+}
+
+/* card style */
+.text-box li {
+    list-style-type: none;
+    margin: 5px;
+    padding: 10px 10px;
+    background: #fff;
+    border-radius: 7px;
+    min-height: 40px;
+    border-bottom: 2px solid rgba(177, 177, 177, 0.781);
+    z-index: 100;
+}
+
+.text-box li:hover {
+    background-color: rgb(243, 243, 243);
+    ;
+}
+
+.add-list {
+    border: 0px;
+    width: 150px;
+    height: 35px;
+    text-align: left;
+    margin: 16px 0px;
+}
+
+.add-list-btn {
+    background: rgb(212 212 212 / 45%);
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.add-list:hover {
+    background: rgb(212 212 212 / 50%);
+    border-radius: 3px;
+}
+
+.add-card {
+    padding: 5px;
+    margin: 0px;
+    font-size: 15px;
+    color: #7d7d7d;
+}
+
+.add-card:hover {
+    color: #5a5a5a;
+    background: #cfcfcf;
+    text-decoration: underline;
+    border-style: 1px solid;
+    border-radius: 3px;
+}
+
+.add-title {
+    border: 0px;
+    width: 150px;
+    height: 35px;
+    text-align: left;
+    border-radius: 3px;
+    background: rgb(212 212 212 / 45%);
+    padding-left: 8px;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    /* Firefox */
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.closebtn {
+    margin-left: 100px;
+}
+
+.addNewCardinput {
+    min-height: 30px;
+    border-radius: 4px;
+}
+
+.List-menu {
+    width: 20px;
+    float: right;
+    color: #767676;
+    position: relative;
+    top: 12px;
+}
+
+.List-menu:hover {
+    color: #3d3d3d;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 7px rgb(197, 197, 197);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(197, 197, 197, 0.486);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(230, 230, 230, 0.616);
+}
+
+.menu {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 50;
+    background-color: #000000b9;
+    top: 0px;
+    left: 0px;
+    animation-name: modalcome;
+    animation-duration: 1s;
+
+}
+
+@keyframes modalcome {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+/* card menu close  */
+.close-m {
+    font-size: 50px;
+    color: rgb(163, 76, 76);
+    position: relative;
+    top: 46px;
+    left: 93%;
+    z-index: 200;
+}
+
+/* card modal menu */
+.menu-content {
+    color: #eeeeee;
+    background-color: rgba(42, 42, 42, 0);
+    font-size: 18px;
+    width: 40%;
+    position: relative;
+    top: 70px;
+    left: 30%;
+    height: 45%;
+    border-radius: 5px;
+    z-index: 99;
+    animation-name: modalcontent;
+    animation-duration: 1s;
+}
+
+@keyframes modalcome {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.edit-card {
+    background-color: rgb(6 6 6 / 91%);
+    position: relative;
+    padding: 15px;
+    transition: 0.5s;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.delete-card {
+    background-color: rgb(6 6 6 / 91%);
+    position: relative;
+    padding: 15px;
+    transition: 0.5s;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.input-edit-card {
+    min-height: 40px;
+    margin-top: 15px;
+}
+
+.open-menu {
+    float: right;
+    color: rgb(179, 178, 178);
+}
+
+.open-menu:hover {
+    color: rgb(61, 61, 61);
+}
+
+.ul {
+    min-height: 20px;
+    min-height: 20px;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+.close-m:hover {
+    color: tomato;
+    cursor: pointer;
+}
+
+.edit-card:hover {
+    color: rgb(2, 172, 135);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.delete-card:hover {
+    color: tomato;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.list-Menucontent {
+    width: 300px;
+    background-color: rebeccapurple;
+}
+
+.list-Menucontent {
+    position: absolute;
+    width: 250px;
+    background-color: #fdfdfd;
+    border-radius: 3px;
+    height: 250px;
+    z-index: 50;
+    border: 1px solid #d6d5d5;
+    ;
+    top: 0px;
+    left: 0px;
+
+}
+
+.action-list {
+    text-align: center;
+    margin: 12px 0px;
+    width: 50%;
+    display: inline-block;
+}
+
+.menu-title {
+    color: #4e4e4e;
+    font-weight: bold;
+}
+
+.clo {
+    color: #707070;
+    float: right;
+    margin: 12px;
+}
+
+.clo:hover {
+    color: #505050;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.MenuListLi {
+    list-style-type: none;
+    color: #505050;
+    padding: 5px 15px;
+}
+
+li.MenuListLi {
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.MenuListLi:hover {
+    background-color: #ebebeb;
+    cursor: pointer;
+}
+
+#searchIcon {
+    cursor: pointer;
+}
+
+.menu-list-ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* ------theme------ */
+.themeMenuMain {
+    position: absolute;
+    top: 76px;
+    left: 78%;
+    float: left;
+    width: 300px;
+    background-color: rgb(244, 245, 247);
+    z-index: 100;
+    height: 565px;
+    border: grey 1px;
+    border-radius: 3px;
+}
+
+#showMenuOption {
+    position: absolute;
+    top: 76px;
+    left: 78%;
+    float: left;
+    width: 300px;
+    background-color: rgb(244, 245, 247);
+    z-index: 100;
+    height: 565px;
+    border: grey 1px;
+    border-radius: 3px;
+    animation-name: mainanimation;
+    animation-duration: 1s;
+}
+
+@keyframes mainanimation {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 78%;
+    }
+}
+
+.Palet {
+    position: relative;
+    width: 130px;
+    height: 90px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: rgb(202, 202, 202);
+    background-size: cover;
+    animation-name: menu_animation;
+    animation-duration: 1s;
+}
+
+.themColor {
+    position: relative;
+    width: 128px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 8px;
+    float: left;
+    animation-name: menu_animation;
+    animation-duration: 1s;
+}
+
+.themColor:hover {
+    opacity: .8;
+}
+
+.Palets {
+    position: relative;
+    float: left;
+    text-align: center;
+    animation-name: menu_animation;
+    animation-duration: 1s;
+}
+
+.Palets:hover {
+    opacity: .8;
+}
+
+@keyframes menu_animation {
+    0% {
+        left: 100px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.themHead {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.closethemMenu {
+    width: 32px;
+    float: right;
+    padding: 9px;
+    margin: 8px;
+}
+
+.closethemMenu:hover {
+    background-color: #e2e4e9;
+    border-radius: 23px;
+    cursor: pointer;
+}
+
+.showMenuOption {
+    margin: 20px;
+    padding: 10px;
+}
+
+#back:hover {
+    background-color: #e2e4e9;
+    cursor: pointer;
+}
+
+.divContainop {
+    position: relative;
+    margin-top: 30px;
+}
+
+.themColor.Palet:hover {
+    box-shadow: 0px 10px 10px #afafaf;
+    cursor: pointer;
+}
+
+.back_menu {
+    font-size: 23px;
+    color: rgb(23, 43, 77);
+    padding: 15px;
+}
+
+.themphoto {
+    background-size: cover;
+}
+
+.customPicModal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.manuTitle {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: rgb(23, 43, 77);
+}
+
+.line {
+    width: 90%;
+    height: 2px;
+    border-top: 1px solid rgb(168, 168, 168);
+    margin-left: 15px;
+}
+
+#custonBtn {
+    background-color: #eaeaeaeb;
+    width: 203px;
+    height: 56px;
+    border-radius: 9px;
+    outline: none;
+    border: 1px;
+    font-size: 17px;
+    margin: 70px;
+    border: 1px solid gray;
+}
+
+#custom-text {
+    background-color: #d8d8d87d;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 165px;
+    margin: 10px;
+
+}
+
+.modalDiv {
+    width: 50%;
+    height: 200px;
+    background-color: #c3c3c3ba;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.clo {
+    float: right;
+    margin-top: 21px;
+    margin-right: 19px;
+}
+
+#showMenu:hover {
+    cursor: pointer;
+}
+
+.text {
+    float: right;
+    margin-top: 80px
+}
+
+.dreagStart {
+    background-color: #0079bf;
+}
+    .result_box {
+        width: 209px;
+        height: 80px;
+        position: absolute;
+        background-color: #fff;
+        z-index: 100;
+        border-radius: 5px;
+        
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        top: 43px;
+        opacity: 87%;
+    }
+  
+        .result_p {
+            font-size: 15px;
+            text-align: center;
+        }
+   
+
+
+@media (min-width: 770px) {}
+
+@media (max-width: 770px) {
+    .icon-trello {
+        width: 100px;
+        position: absolute;
+        right: 32%;
+        top: 4px;
+    }
+
+
+    
+}
+
+@media (max-width: 426px){
+    .search-button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .col-6 {
+        width: 100%;
+        float: left;
+        height: 34px;
+    }
+
+    .col-12 {
+        width: 100%;
+        float: left;
+    }
+
+    .col-4 {
+        width: 33.33px;
+    }
+
+    .col-3 {
+        width: 50%;
+        float: left;
+    }
+
+    .search-button {
+        background: initial;
+        position: relative;
+        top: -11px;
+        height: 23px;
+        width:80%;
+        left: 7px;
+    }
+
+    .boards {
+        float: left;
+        height: 26px;
+        width: 80px;
+        margin: 5px 10px;
+        border: none;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .nav-left * {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-left: 4px;
+        margin-bottom: 10px;
+        display: inline-block;
+        color: #FFF;
+    }
+
+    .icon-trello {
+        width: 83px;
+        top: 9px;
+        left: 69%;
+    }
+
+    .search-icon {
+        margin: 5px;
+        width: 18px;
+    }
+
+    .search {
+        margin: 6px;
+        height: 26px;
+        position: relative;
+        margin-left: 9px;
+        margin-bottom: 5px;
+        top: 63px;
+    }
+
+    .treloo-icon {
+        width: 18px;
+        float: left;
+        margin-top: 2px;
+    }
+
+    .s-btn {
+        margin: 4px 6px;
+        width: 29px;
+        height: 26px;
+        margin-right: 0px;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+        position: relative;
+        left: -16px;
+    }
+
+    #showMenuOption {
+        position: absolute;
+        top: 130px;
+        left: 38%;
+        float: left;
+        width: 200px;
+        height: 350px;
+    }
+
+    .themeMenuMain {
+        position: absolute;
+        top: 130px;
+        left: 38%;
+        float: left;
+        width: 200px;
+        height: 350px;
+    }
+
+    .Palet {
+        position: relative;
+        width: 100px;
+        height: 59px;
+        margin: 10px;
+        margin-left: 43px;
+    }
+    @keyframes menu_animation {
+        0% {
+            left: 38px;
+        }
+    
+        100% {
+            left: 0px;
+        }
+    }
+
+    .manuTitle {
+        font-size: 12px;
+        margin-top: 12px;
+    }
+    .closethemMenu {
+        width:30px;
+        float: right;
+        margin-right: 4px;
+    }
+    .showMenuOption {
+        font-size: 15px;
+    }
+    .span{
+        font-size: 10px;
+    }
+    .back_menu {
+        font-size: 20px;
+        padding-left:8px;
+        padding-top: 9px;
+    }
+    .themColor {
+        position: relative;
+        width: 78px;
+        height: 50px;
+        margin: 5px 10px;
+        border-radius: 8px;
+    
+    }
+    @keyframes mainanimation {
+        0% {
+            left: 100%;
+        }
+         100% {
+            left: 38%;
+        }
+    }
+    .nav-right{font-size: 13px;}
+    .close-m {
+        font-size: 40px;
+        top: 46px;
+        left: 77%;
+      }
+    .menu-content {
+        font-size: 18px;
+        width: 63%;
+        position: fixed;
+        height: 45%;
+       left: 47px !important;
+        top: 142px;
+    }
+    .result_box{
+        display: none;
+    }
+}

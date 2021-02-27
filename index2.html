@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="icon" href="img/trello.svg">
+    <title>trello</title>
+</head>
+<body>
+    <div class="showMenu"></div>
+    <div class="container-fluid">
+        <header class="header h-bg">
+            <div class="col-6">
+                <button class="boards boarder-radiuse">
+                    <img class="treloo-icon" src="img/trello-icon.png">
+                    <p class="board-text">Boards</p>
+                </button>
+                <form class="search">
+                    <input class="search-button" id='searchinput'  placeholder="search card name..."type="text" />
+                    
+                    <img class="search-icon" id='searchIcon'src="img/search.png" />
+                </form>
+            </div>
+            <div class="col-3 float-right">
+                <button class="boarder-radiuse s-btn float-right"> <i class="fa fa-user-circle"
+                        aria-hidden="true"></i></button>
+                <button class="boarder-radiuse s-btn float-right"><i class="fa fa-bell" aria-hidden="true"></i>
+                </button>
+                <button class="boarder-radiuse s-btn float-right" id="changStyle"> <i class="fa fa-exclamation-circle"
+                        aria-hidden="true"></i></button>
+                <button class="boarder-radiuse s-btn float-right"> <i class="fa fa-plus"
+                        aria-hidden="true"></i></button>
+            </div>
+            <img class="icon-trello" src="img/logo-trello.png" />
+            <div class="clearfix"></div>
+        </header>
+        <div class="nav">
+            <div class="col-6 nav-left ">
+                <p>
+                    <h4>Web Development</h4>
+                </p>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <p> Personal</p>
+                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                <p> Private</p>
+            </div>
+            <div class="col-6 ">
+                <p class="nav-right" onclick="appendC()" id="showMenu">Show Menu <i class="fa fa-ellipsis-h" aria-hidden="true"></i></p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="content">
+            <div class="task-wraper">
+            </div>
+        </div>
+    </div>
+    <script src="js/creat-el.js"></script>
+    <script src="js/creat-card.js"></script>
+    <script src="js/creat-list.js"></script>
+    <script src="js/add-listButton.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
